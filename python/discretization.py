@@ -169,7 +169,7 @@ pp.close()
 
 def bar_graph(data,pp3):
     x_labels = ['I(S;YZ)', 'I(S;Y)', 'I(S;Z)', 'UI(S;Z\Y)', 'UI(S;Y\Z)']
-    i_yz = data['metrics']['si']+data['metrics']['ci']
+    i_yz = data['metrics']['mi']
     i_y = data['metrics']['si']+data['metrics']['ui_0']
     i_z = data['metrics']['si']+data['metrics']['ui_1']
     values = (round(i_yz,5),round(i_y,5),round(i_z,5),round(data['metrics']['ui_1'],5),round(data['metrics']['ui_0'],5))
