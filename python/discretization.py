@@ -111,7 +111,7 @@ def plot(data):
     plt.tight_layout()
     plt.xlabel('Mutual information: '+str(data['metrics']['mi']))
     plt.savefig(pp, format='pdf')
-    #plt.show()
+    plt.show()
 
 
 def information_decomposition(dist, src, to=""):
@@ -172,6 +172,7 @@ def bar_graph(data,pp3):
     i_yz = data['metrics']['mi']
     i_y = data['metrics']['si']+data['metrics']['ui_0']
     i_z = data['metrics']['si']+data['metrics']['ui_1']
+    print(data['metrics']['ci'])
     values = (round(i_yz,5),round(i_y,5),round(i_z,5),round(data['metrics']['ui_1'],5),round(data['metrics']['ui_0'],5))
     ind = np.arange(len(x_labels))
     width = 0.35
