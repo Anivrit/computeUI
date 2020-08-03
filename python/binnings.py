@@ -162,7 +162,6 @@ def save_values():
             ]
             # take all samples with attributes that we're interested in
             data_array = list(map(lambda r: tuple(r[k] for k in selected_columns), df.to_dict("record")))
-
             # create distribution from the samples with uniform distribution
             dist_census = dit.Distribution(data_array, [1. / df.shape[0] ] * df.shape[0])
             # set variable aliases to the discribution
